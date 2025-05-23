@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaser Lab</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body {
+      background: #f2f2f2;
+      color: #000;
+    }
+    header {
+      background: #fff;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #000;
+    }
+    nav a.active {
+      background: darkred;
+      color: white;
+      padding: 0.5em;
+      border-radius: 5px;
+    }
+    .hero {
+      text-align: center;
+      padding: 2em;
+      background: #ddd;
+    }
+    .hero h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+    }
+    .tabs button {
+      margin: 0 1em;
+      background: none;
+      border: none;
+      font-size: 1em;
+      padding: 0.5em;
+      cursor: pointer;
+    }
+    .tabs .active {
+      background: #aaa;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 2em;
+      background: white;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: black;
+      color: white;
+      padding: 1em;
+      border-radius: 10px;
+      width: 250px;
+    }
+    .card h3 {
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .card ul {
+      list-style: none;
+    }
+    .card ul li::before {
+      content: '\2713';
+      margin-right: 0.5em;
+      color: lightgreen;
+    }
+    .buttons {
+      text-align: center;
+      margin: 2em 0;
+    }
+    .buttons button {
+      padding: 0.75em 1.5em;
+      margin: 0 1em;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background: #ccc;
+      cursor: pointer;
+    }
+    .note {
+      background: white;
+      padding: 1em;
+      border-radius: 10px;
+      width: 80%;
+      margin: 2em auto;
+      font-size: 0.9em;
+    }
+    .note strong {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Teaser Lab</strong></div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#profile">Profile</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>#Karena Teaser yang Baik, ya Tentu Teaser Lab!</h1>
+    <p>Teaser Lab! Teaser Lab!</p>
+  </div>
+
+  <div class="tabs">
+    <button class="active">Teaser</button>
+    <button>Pembuatan mockup</button>
+    <button>Video Editing</button>
+  </div>
+
+  <div class="section">
+    <h2>TEASER</h2>
+    <p style="text-align: center; max-width: 600px; margin: 1em auto">
+      Teaser produk adalah bentuk iklan atau promosi yang dirancang untuk menarik perhatian audiens dan membuat mereka penasaran tentang produk atau layanan yang akan diluncurkan.
+    </p>
+    <div class="buttons">
+      <button onclick="scrollToPricelist()">Cek Pricelist</button>
+      <button>Pesan</button>
+    </div>
+  </div>
+
+  <div id="pricelist" class="section">
+    <div class="pricing">
+      <div class="card">
+        <h3>25K</h3>
+        <ul>
+          <li>Pembuatan mockup produk</li>
+          <li>Durasi: Max 30 detik</li>
+          <li>Minor revisi: Max 3x</li>
+          <li>Konsep: dari team atau request</li>
+          <li>Tambah durasi: +Rp5.000 per 10s</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>20K</h3>
+        <ul>
+          <li>Durasi: Max 30 detik</li>
+          <li>Minor revisi: Max 3x</li>
+          <li>Konsep: dari team atau request</li>
+          <li>Tambah durasi: +Rp5.000 per 10s</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Catatan:</strong>
+    <p>Minor Revisi (teks, warna, transisi sederhana, sound): Gratis</p>
+    <p>Major Revisi (ubah konsep, layout ulang): Rp10.000 per revisi</p>
+    <p>Biaya transportasi untuk take jauh menyesuaikan lokasi tujuan.</p>
+  </div>
+
+  <script>
+    function scrollToPricelist() {
+      document.getElementById('pricelist').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
